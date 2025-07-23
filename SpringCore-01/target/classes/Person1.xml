@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+  http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+    
+    <bean name="cer" class="com.rays.constructor.Certi">
+		<constructor-arg value="Android using kotlin"/>
+		
+	</bean>
+
+	<bean name="Person1" class="com.rays.constructor.Person1">
+		<constructor-arg value="Durgesh"/>
+		<constructor-arg value="12" type="int"/>
+		<constructor-arg ref="cer"/>
+	</bean>
+	
+	<bean name="add" class="com.rays.constructor.Adition">
+		<constructor-arg value="12" type="int" index="1"/>
+		<constructor-arg value="34"  type="int" index="0"/>
+		
+	</bean>
+	
+	
+	
+</beans>
